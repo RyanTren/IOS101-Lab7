@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="r00-Jb-S6c">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rsU-SU-KtK">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -70,7 +70,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="956.48854961832058" y="-307.04225352112678"/>
+            <point key="canvasLocation" x="1883.206106870229" y="-307.04225352112678"/>
         </scene>
         <!--Movie Details-->
         <scene sceneID="m9Q-zy-QPn">
@@ -122,6 +122,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEv-lc-LHC">
+                                <rect key="frame" x="333" y="304" width="44" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="2" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="heart" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
+                                </state>
+                                <state key="selected" image="heart.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="didTapFavoriteButton:" destination="H2z-Jj-psh" eventType="touchUpInside" id="coN-R9-oIz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="o95-lt-8HL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -129,6 +143,7 @@
                     <navigationItem key="navigationItem" title="Movie Details" largeTitleDisplayMode="never" id="V2m-Yj-CJe"/>
                     <connections>
                         <outlet property="backdropImageView" destination="deP-SK-iIR" id="1c7-4Q-0sj"/>
+                        <outlet property="favoriteButton" destination="oEv-lc-LHC" id="W96-dm-6xz"/>
                         <outlet property="overviewTextView" destination="QMb-Q3-L8A" id="6oZ-ng-34y"/>
                         <outlet property="posterImageShadowView" destination="XPC-qI-pi0" id="Ye9-wc-tCT"/>
                         <outlet property="posterImageView" destination="eFS-JQ-YzC" id="5cH-02-Oo3"/>
@@ -139,13 +154,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RVQ-SM-UZ1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1881.679389312977" y="-308.45070422535213"/>
+            <point key="canvasLocation" x="2808.3969465648852" y="-308.45070422535213"/>
         </scene>
-        <!--Item-->
+        <!--Popular-->
         <scene sceneID="c88-ii-B8m">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="r00-Jb-S6c" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="i8G-ri-gmu"/>
+                    <tabBarItem key="tabBarItem" title="Popular" image="popcorn.fill" catalog="system" id="i8G-ri-gmu"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="w23-6k-Os7">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -158,7 +173,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vsx-Hk-dzw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="28.244274809160306" y="-307.04225352112678"/>
+            <point key="canvasLocation" x="954.96183206106866" y="-307.04225352112678"/>
         </scene>
         <!--Favorites-->
         <scene sceneID="Nsm-Z2-TdE">
@@ -231,11 +246,11 @@
             </objects>
             <point key="canvasLocation" x="956" y="420"/>
         </scene>
-        <!--Item-->
+        <!--Favorites-->
         <scene sceneID="Koc-Wc-rm3">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9h2-P9-4RD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="hid-oF-a7y"/>
+                    <tabBarItem key="tabBarItem" title="Favorites" image="heart.fill" catalog="system" id="hid-oF-a7y"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="n5l-gZ-1Em">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -250,19 +265,43 @@
             </objects>
             <point key="canvasLocation" x="30" y="420"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Bkt-Mf-Z9H">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="rsU-SU-KtK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pGC-2e-xDB">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="r00-Jb-S6c" kind="relationship" relationship="viewControllers" id="Fey-6s-m3q"/>
+                        <segue destination="9h2-P9-4RD" kind="relationship" relationship="viewControllers" id="Zm0-Ow-fw3"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M7H-YD-gx5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.244274809160306" y="-307.04225352112678"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="E9M-SY-9f1"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="heart" catalog="system" width="128" height="107"/>
+        <image name="heart.fill" catalog="system" width="128" height="107"/>
+        <image name="popcorn.fill" catalog="system" width="98" height="128"/>
         <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
