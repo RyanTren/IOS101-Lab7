@@ -1,4 +1,4 @@
-## Lab 6: Flix Detail
+## Lab 7: Flix Detail
 
 ### Overview
 
@@ -10,11 +10,11 @@ In this lab, you'll allow users to save their favorite movies and view them in a
 ### 🎯 Goals
 
 By the end of this lab you will be able to...
-- [ ] Set up a tab bar and multiple tabs using a *Tab Bar Controller*
-- [ ] Save, retrieve and delete data from local storage using *UserDefaults*
-- [ ] Create custom buttons styled for their various states
+- [x] Set up a tab bar and multiple tabs using a *Tab Bar Controller*
+- [x] Save, retrieve and delete data from local storage using *UserDefaults*
+- [x] Create custom buttons styled for their various states
 
 #### Required Features
 
-- [ ] Users can toggle a *"Favorite"* button in the movie detail screen to save/delete a movie from their collection of favorite movies.
-- [ ] Users can view a scrolling list of their favorite movies on a *"Favorites"* tab.
+- [x] Users can toggle a *"Favorite"* button in the movie detail screen to save/delete a movie from their collection of favorite movies.
+- [x] Users can view a scrolling list of their favorite movies on a *"Favorites"* tab.
